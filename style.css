@@ -1,0 +1,149 @@
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-image: linear-gradient(135deg, #232F3F, #0E151F);
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    color: white;
+}
+
+body, button {
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    color: white;
+}
+
+p {
+    margin: 0;
+}
+
+/* Background */
+
+#site {
+    height: 100%;
+    background-image: url("rps-ui/Robot-Hand.png");
+    background-repeat: no-repeat;
+    background-position-x: 200px;
+    background-position-y: 100%;
+    background-size: auto 85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+/* Scoreboard at the top */
+.score {
+    background: rgba( 92, 108, 133, 0.5 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 8px );
+    -webkit-backdrop-filter: blur( 8px );
+    padding: 40px 5px 40px 5px;
+    display: flex;
+    justify-content: center;
+    gap: 150px;
+
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 15%;
+
+}
+
+/* left Content Elements */
+
+.suplements {
+    display: flex;
+    flex-direction: column;
+}
+
+#headline {
+    padding: 25px 75px 200px 75px;
+}
+
+#jankenHead {
+    width: 400px;
+    height: auto;
+}
+
+#jankenCaption {
+    margin-top: 10px;
+}
+
+#rpsIllu {
+    width: 100px;
+    height: auto;
+    padding: 0 75px 50px 75px;
+}
+
+#rules {
+    background: rgba( 92, 108, 133, 0.5 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 8px );
+    -webkit-backdrop-filter: blur( 8px );
+    padding: 50px 75px 50px 75px;
+    margin-bottom: 0;
+    width: 550px;
+    border-radius: 10px;
+}
+
+p.infoText {
+    color: #a5a5a5;
+    line-height: 22px;
+}
+
+/* right Content Elements */
+
+.playBtns {
+    display: flex;
+    flex-direction: column;
+    padding-right: 75px;
+    padding-bottom: 50px;
+    gap: 30px;
+    flex: 1;
+    justify-content: flex-end;
+}
+
+button {
+    height: 100px;
+    display: flex;
+    background: none;
+    border: 3px solid white;
+    border-radius: 10px;
+    padding-left: 30px;
+    align-items: center;
+    gap: 39%;
+}
+
+button:hover{
+    filter: invert(72%) sepia(60%) saturate(964%) hue-rotate(5deg) brightness(250%) contrast(101%);
+}
+
+button:active{
+    height: 95px;
+    margin-top: 5px;
+    filter: invert(72%) sepia(60%) saturate(964%) hue-rotate(5deg) brightness(170%) contrast(101%);
+}
+
+#rockIcon, #paperIcon, #scissorsIcon {
+    width: 50px;
+    height: auto;
+}
+
+.btnNames {
+    align-self: center
+}
+
+p#roundInfo {
+    text-align: center;
+    margin-bottom: 50px;
+}

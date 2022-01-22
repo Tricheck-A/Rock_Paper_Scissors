@@ -5,12 +5,56 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
     <script type="text/javascript" src="script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <button id = "rockBtn" type="button">Rock</button>
-    <button id = "paperBtn" type="button">Paper</button>
-    <button id = "scissorsBtn" type="button">Scissors</button>
-    <div id = "scoreBoard"></div>
+    <div id = "site">
+    <div class = "score">
+        <div id = "yourScore">YOUR SCORE: </div>
+        <div id = "comScore">COMPUTER SCORE: </div>
+        <div id = "scoreBoard"></div>
+    </div>
+
+    <div class="content">
+    <div class = "suplements">
+        <div id = "headline">
+          <img id = "jankenHead" src = "rps-ui/Janken.svg" alt = "String of the Word Janken as SVG file">
+          <p id = "jankenCaption">ROCK-PAPER-SCISSORS</p>
+        </div>
+        <img id = "rpsIllu" src="rps-ui/rps.svg" alt="Illustrations of Rock, Paper, and Scissors.">
+        <div id = "rules">
+            <p class = "headlines">RULES</p>
+            <br>
+            <p class = "infoText">
+                The game is played with three possible hand signals that represent a rock,
+                paper, and scissors. Rock wins against scissors; paper wins against rock;
+                and scissors wins against paper. If both players throw the same hand signal,
+                it is considered a tie and play resumes until there is a clear winner.<br>
+                The first player with a score of 5 wins the game.
+            </p>
+        </div>
+    </div>
+    <div class = "playBtns">
+        <p id = "roundInfo">Choose a sign to start the game.</p>
+        <button id = "rockBtn" type="button">
+            <img id = "rockIcon" src="rps-ui/Stein.svg" alt="Illustration of a Hand doing a Rock sign">
+            <p class = "btnNames">ROCK</p>
+        </button>
+        <button id = "paperBtn" type="button">
+            <img id = "paperIcon" src="rps-ui/Papier.svg" alt="Illustration of a Hand doing a Rock sign">
+            <p class = "btnNames">PAPER</p>
+        </button>
+        <button id = "scissorsBtn" type="button">
+            <img id = "scissorsIcon" src="rps-ui/Schere.svg" alt="Illustration of a Hand doing a Rock sign">
+            <p class = "btnNames">SCISSORS</p>
+        </button>
+    </div>
+    </div>
+    </div>
+
 </body>
 </html>

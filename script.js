@@ -57,36 +57,48 @@ function playRound (playerSelection, computerSelection) {
 let playerScore = 0;
 let computerScore = 0;
 
+// Score Strings
+let stringYourScore = document.getElementById('yourScore');
+let stringComScore = document.getElementById('comScore');
+
 function showScore (playerSelection, computerSelection) {
 
-    // Falls Gleichstand herrscht
-    if (playerSelection === computerSelection) {
-        return `You: ${playerScore} | Computer: ${computerScore}`;
-    }
-    // P: Rock , C: Scissors
-    else if (playerSelection === "rock" && computerSelection === "scissors"){
-        return `You: ${++playerScore} | Computer: ${computerScore}`;
-    }
-    // P: Rock , C: Paper
-    else if (playerSelection === "rock" && computerSelection === "paper"){
-        return `You: ${playerScore} | Computer: ${++computerScore}`;
-    }
-    // P: Scissors , C: Rock
-    else if (playerSelection === "scissors" && computerSelection === "rock"){
-        return `You: ${playerScore} | Computer: ${++computerScore}`;
-    }
-    // P: Scissors , C: Paper
-    else if (playerSelection === "scissors" && computerSelection === "paper"){
-        return `You: ${++playerScore} | Computer: ${computerScore}`;
-    }
-    // P: Paper , C: Rock
-    else if (playerSelection === "paper" && computerSelection === "rock"){
-        return `You: ${++playerScore} | Computer: ${computerScore}`;
-    }
-    // P: Paper , C: Scissors
-    else if (playerSelection === "paper" && computerSelection === "scissors"){
-        return `You: ${playerScore} | Computer: ${++computerScore}`;
-    }
+
+// Falls Gleichstand herrscht
+if (playerSelection === computerSelection) {
+    stringYourScore.innerHTML = `YOUR SCORE: ${playerScore}`;
+    stringComScore.innerHTML = `COMPUTER SCORE: ${computerScore}`;
+}
+// P: Rock , C: Scissors
+else if (playerSelection === "rock" && computerSelection === "scissors"){
+    stringYourScore.innerHTML = `YOUR SCORE: ${++playerScore}`; 
+    stringComScore.innerHTML = `COMPUTER SCORE: ${computerScore}`;
+}
+// P: Rock , C: Paper
+else if (playerSelection === "rock" && computerSelection === "paper"){
+    stringYourScore.innerHTML = `YOUR SCORE: ${playerScore}`;
+    stringComScore.innerHTML = `COMPUTER SCORE: ${++computerScore}`;
+}
+// P: Scissors , C: Rock
+else if (playerSelection === "scissors" && computerSelection === "rock"){
+    stringYourScore.innerHTML = `YOUR SCORE: ${playerScore}`;
+    stringComScore.innerHTML = `COMPUTER SCORE: ${++computerScore}`;
+}
+// P: Scissors , C: Paper
+else if (playerSelection === "scissors" && computerSelection === "paper"){
+    stringYourScore.innerHTML = `YOUR SCORE: ${++playerScore}`; 
+    stringComScore.innerHTML = `COMPUTER SCORE: ${computerScore}`;
+}
+// P: Paper , C: Rock
+else if (playerSelection === "paper" && computerSelection === "rock"){
+    stringYourScore.innerHTML = `YOUR SCORE: ${++playerScore}`; 
+    stringComScore.innerHTML = `COMPUTER SCORE: ${computerScore}`;
+}
+// P: Paper , C: Scissors
+else if (playerSelection === "paper" && computerSelection === "scissors"){
+    stringYourScore.innerHTML = `YOUR SCORE: ${playerScore}`;
+    stringComScore.innerHTML = `COMPUTER SCORE: ${++computerScore}`;
+}
 }
 
 
@@ -131,18 +143,20 @@ scissorsBtn.addEventListener('click', function (){
 // Scoreboard
 let scoreBoard = document.getElementById('scoreBoard');
 let scoreInfo;
+let roundInfo = document.getElementById('roundInfo');
 
 function updateScore(){
 
     if (playerScore == 5){
-        scoreBoard.innerHTML = "You won the game!";
+        roundInfo.innerHTML = "You won the game!";
     }
     else if (computerScore == 5){
-        scoreBoard.innerHTML = "You lost the game";
+        roundInfo.innerHTML = "You lost the game";
     }
     else {
-    scoreInfo = playRound(playerSelection, computerSelection) + '<br>' + 
-                showScore(playerSelection, computerSelection);
-    scoreBoard.innerHTML = scoreInfo;
-    }
+    scoreInfo = showScore(playerSelection, computerSelection);
+    roundInfo.innerHTML = playRound(playerSelection, computerSelection);
+    }             
 };
+
+
